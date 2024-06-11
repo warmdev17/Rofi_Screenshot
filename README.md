@@ -1,4 +1,4 @@
-## ROFI SCREENSHOT (use maim, xlip)
+## ROFI SCREENSHOT (use maim, xclip)
 
 Based on [rofi-screenshot](https://github.com/ceuk/rofi-screenshot)
 
