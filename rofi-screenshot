@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+
+DIR="$HOME/Pictures/Screenshots/"
+NAME="screenshot_$(date +%d%m%Y_%H%M%S).png"
+
+get_options() {
+	echo "  Area"
+	echo "  Fullscreen"
+}
+
+option1="  Area"
+option2="  Fullscreen"
+option3="  Window"
+
+options="$option1\n$option2\n$option3"
+
+main() {
+	# Get choice from rofi
+	choice=$(echo -e "$options" | rofi -dmenu -i --fuzzy -p "Screenshot")
+
+	case $choice in
+	$option1)
+		maim -o --select "$DIR$NAME"
+		xclip -selection clipboard -t image/png -i "$DIR$NAME"
+		notify-send "Screenshot created and copied to clipboard" "Mode: Selected area"
+		;;
+	$option2)
+		sleep 2
+		maim "$DIR$NAME"
+		xclip -selection clipboard -t image/png -i "$DIR$NAME"
+		notify-send "Screenshot created and copied to clipboard" "Mode: Fullscreen"
+		;;
+	$option3)
+		sleep 2
+		maim --window $(xdotool getactivewindow) "$DIR$NAME"
+		xclip -selection clipboard -t image/png "$DIR$NAME"
+		notify-send "Screenshot created and copied to clipboard" "Mode: Window"
+		;;
+	esac
+	# done
+	set -e
+}
+
+main "$@" &
+
+exit 0
+
+! /bin/bash
