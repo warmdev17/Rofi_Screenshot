@@ -18,6 +18,7 @@ Clone the repository
 ```
 git clone https://github.com/warmdev17/Rofi_Screenshot
 cd Rofi_Screenshot
+chmod u+x rofi-screenshot
 sudo mv rofi-screenshot /usr/local/bin/
 ```
 
