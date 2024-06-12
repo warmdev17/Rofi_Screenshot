@@ -7,7 +7,7 @@ Based on [rofi-screenshot](https://github.com/ceuk/rofi-screenshot)
 Install dependencies
 
 ```
-sudo pacman -S rofi maim xlip xdotool
+sudo pacman -S rofi maim xclip xdotool
 ```
 
 > [!TIP]
