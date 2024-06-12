@@ -7,7 +7,7 @@ Based on [rofi-screenshot](https://github.com/ceuk/rofi-screenshot)
 Install dependencies
 
 ```
-  sudo pacman -S rofi maim xlip xdotool
+sudo pacman -S rofi maim xlip xdotool
 ```
 
 > [!TIP]
@@ -16,13 +16,13 @@ Install dependencies
 Clone the repository
 
 ```
-  git clone https://github.com/warmdev17/Rofi_Screenshot
-  cd Rofi_Screenshot
-  sudo mv rofi-screenshot /usr/local/bin/
+git clone https://github.com/warmdev17/Rofi_Screenshot
+cd Rofi_Screenshot
+sudo mv rofi-screenshot /usr/local/bin/
 ```
 
 ## Usage (example on i3wm)
 
 ```
-  bindsym $alt+Print exec rofi-screenshot
+bindsym $alt+Print exec rofi-screenshot
 ```
